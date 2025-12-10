@@ -1,5 +1,8 @@
 ---
  - hosts: webservers
+ become: true
+ become_user: root
+
    tasks:
      - name: copy the file from local to remote
        copy:
